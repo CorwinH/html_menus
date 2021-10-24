@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,oCAAqC;EACnC,cAAc;IACZ,GAAG,EAAE,IAAI;IACT,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,GAAG;IACX,UAAU,EAAE,MAAM;IAClB,UAAU,EAAE,wBAAwB;;EAEtC,yBAAyB;IACvB,MAAM,EAAE,KAAK",
+"sources": ["menu1_fromTop.scss"],
+"names": [],
+"file": "menu1_fromTop.css"
+}
