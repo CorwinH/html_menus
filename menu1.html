@@ -85,7 +85,14 @@
         var body = document.getElementById("body");
         var x = document.getElementById("myTopnav");
 
-       
+      // removes the sub (dropdown menu) if active
+        function reset_subMenu(){
+          for (i = 0; i < coll.length; i++) {
+              if(coll[i].classList.contains("active")){
+                coll[i].classList.remove('active')
+                }
+            }
+        }
 
         // reset responsive menu when width is (Greater Than) break point
         function mysitewidth(){
@@ -94,25 +101,21 @@
             x.classList.remove('responsive')
             body.style.overflow = "auto";
 
-
             // removes the sub (dropdown menu) if active
-            for (i = 0; i < coll.length; i++) {
-              if(coll[i].classList.contains("active")){
-                coll[i].classList.remove('active')
-                }
-            }
-
-
+            reset_subMenu();
           }
         }
         //
+       
         
+
         // main menu
         function myFunction() {
           
           if (x.classList.contains("responsive")) {
             x.classList.remove('responsive')
             body.style.overflow = "auto";
+            reset_subMenu();
           } else {
             x.classList.add('responsive');
             body.style.overflow = "hidden";
