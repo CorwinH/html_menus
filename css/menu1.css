@@ -134,7 +134,7 @@ header {
 
   .topnav .nav_L {
     left: 0;
-    top: 61px;
+    top: 72px;
     width: 0px;
     height: 100vh;
     transition: width 0.6s, border 0.6s;
