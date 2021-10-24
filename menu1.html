@@ -20,14 +20,42 @@
 
               <div class="iscell nav_L">
                 <ul>
-                  <li><a href="#news" class="active">News</a></li>
+
+                  <li class="dp-link">
+                    <a href="#news" class="active" id="dimensions">News</a>
+
+                    <div class="dropdown">
+                      <ul>
+                        <li><a href="" class="pie">pie</a></li>
+                        <li><a href="">pie</a></li>
+                        <li><a href="">pie</a></li>
+                        <li><a href="">pie</a></li>
+                        <li><a href="">pie</a></li>
+                      </ul>
+                    </div>
+
+                  </li>
+
                   <li><a href="#contact">Contact</a></li>
-                  <li><a href="#about">About</a></li>
+                  <li class="dp-link">
+                    <a href="#contact">Contact</a>
+
+                    <div class="dropdown">
+                      <ul>
+                        <li><a href="">pie</a></li>
+                        <li><a href="">pie</a></li>
+                        <li><a href="">pie</a></li>
+                        <li><a href="">pie</a></li>
+                        <li><a href="">pie</a></li>
+                      </ul>
+                    </div>
+
+                  </li>
                 </ul>
               </div>
 
               <div class="iscell nav_M callinfo">
-                <a href="">Call Mom: (321) 482-8917</a>
+                <a href="">Call Mom: (555) 555-8917</a>
               </div>
 
               <div class="iscell nav_R">
@@ -49,14 +77,37 @@
       </div>
 
       <script type="text/javascript">
-       var body = document.getElementById("body");
+      window.onresize = mysitewidth;
+      window.onload = mysitewidth;
+        var coll = document.getElementsByClassName("dp-link");
+        var i;
 
-        
-        var navlink = document.getElementsByClassName("m3");
+        var body = document.getElementById("body");
         var x = document.getElementById("myTopnav");
-        var mainbody = document.getElementById("mainbody");
+
+       
+
+        // reset responsive menu when width is (Greater Than) break point
+        function mysitewidth(){
+          
+          if((window.innerWidth >= 723) && (x.classList.contains("responsive"))){
+            x.classList.remove('responsive')
+            body.style.overflow = "auto";
 
 
+            // removes the sub (dropdown menu) if active
+            for (i = 0; i < coll.length; i++) {
+              if(coll[i].classList.contains("active")){
+                coll[i].classList.remove('active')
+                }
+            }
+
+
+          }
+        }
+        //
+        
+        // main menu
         function myFunction() {
           
           if (x.classList.contains("responsive")) {
@@ -68,6 +119,29 @@
           }
 
         }
+        //
+
       </script>
+
+<script>
+  
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdown = this.nextElementSibling;
+      
+      
+      if (dropdown.style.Height != 100){
+        dropdown.style.Height = 100 + "px";
+      } else {
+        dropdown.style.Height = 400 + "px";
+      } 
+    });
+  }
+  </script>
+
+  
+
   </body>
 </html>
