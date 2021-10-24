@@ -2,17 +2,22 @@ html, body {
   font-size: 15px;
   margin: 0px;
   padding: 0px;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #141414; }
+
+a {
+  text-decoration: none; }
 
 .sticky {
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
-  top: 0;
-  background-color: red; }
+  top: 0; }
+
+header {
+  background-color: #4b4b4b; }
 
 .topnav {
-  background-color: red;
   display: table;
   width: 100%;
   max-width: 1100px;
@@ -37,36 +42,48 @@ html, body {
     display: inline-block;
     font-size: 15px; }
 
-.callmom {
-  background-color: orange;
+.callinfo {
   text-align: center; }
 
 .menuicon {
   display: none; }
 
-.topnav a {
+.topnav a, .dp-link {
   display: block;
-  color: #4b4b4b;
+  color: #fff;
   text-align: center;
-  padding: 20px 16px 21px 16px;
-  text-decoration: none;
+  padding: 26px 16px 26px 16px;
   font-size: 17px;
   transition: background-color 0.2s, color 0.2s; }
-  .topnav a:hover {
-    background-color: #afd28a;
-    color: black; }
-  .topnav a.active {
-    background-color: #afd28a;
+  .topnav a:hover, .dp-link:hover {
+    background-color: #dcdcdc;
     color: #000; }
+  .topnav a.active, .dp-link.active {
+    background-color: #dcdcdc;
+    color: #000; }
+
+.dp-link:hover a {
+  color: #000; }
+
+.dp-link:hover div a {
+  color: #000; }
 
 .sitelogo {
   width: 150px;
-  background-color: pink; }
+  max-width: 150px; }
+  .sitelogo img {
+    max-width: 150px; }
 
 .nav_M {
   padding: 0px;
   width: 230px;
-  background-color: blue; }
+  background-color: #dcdcdc; }
+  .nav_M a {
+    background-color: inherit;
+    color: #000; }
+    .nav_M a:hover {
+      color: inherit;
+      background-color: inherit; }
 
 .closemenu {
   background-color: rgba(0, 0, 0, 0.45);
@@ -91,23 +108,19 @@ html, body {
     border-bottom: solid thin #000; }
 
 @media screen and (min-width: 721px) {
-  .dp-link:hover a:first-child {
-    background-color: #afd28a;
-    color: black; }
   .dp-link:hover .dropdown {
     display: block; } }
 .dropdown li {
   width: 100%; }
   .dropdown li a {
-    text-align: left;
-    background-color: inherit !important; }
+    text-align: left; }
     .dropdown li a:hover {
-      background-color: #afd28a !important;
-      color: black; }
+      background-color: #dcdcdc !important;
+      color: #000; }
 
 @media screen and (max-width: 720px) {
   .nav_R {
-    background-color: black; }
+    background-color: #000; }
 
   .topnav ul {
     text-align: center;
@@ -157,11 +170,9 @@ html, body {
   .dropdown li {
     width: 100%; }
     .dropdown li a {
-      text-align: center;
-      background-color: inherit !important; }
+      text-align: center; }
       .dropdown li a:hover {
-        background-color: #afd28a !important;
-        color: black; }
+        color: #000; }
 
   .active .dropdown {
     padding: 0px;
@@ -233,7 +244,6 @@ html, body {
 
   /*end X button*/ }
 .full_containers {
-  height: 200vh;
-  background-color: brown; }
+  height: 200vh; }
 
 /*# sourceMappingURL=menu1.css.map */
