@@ -8,7 +8,8 @@ html, body {
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
-  top: 0; }
+  top: 0;
+  background-color: red; }
 
 .contanerx {
   max-width: 600px; }

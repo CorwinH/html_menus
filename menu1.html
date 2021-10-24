@@ -6,7 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="css/menu1.css">
   </head>
-  <body>
+  <body id="body">
 
     <header class="container sticky">
 
@@ -49,33 +49,22 @@
       </div>
 
       <script type="text/javascript">
-        var closemenu = document.getElementById("closemenu");
+       var body = document.getElementById("body");
+
+        
         var navlink = document.getElementsByClassName("m3");
         var x = document.getElementById("myTopnav");
         var mainbody = document.getElementById("mainbody");
 
-        function myFunctionx() {
-          closemenu.style.display = "none"
-            x.className = "topnav";
-        }
 
         function myFunction() {
-
-
-
-
-
-          if (x.className === "topnav") {
-            x.className += " responsive";
-            closemenu.style.display = "block"
-            //mainbody.style.marginLeft = "200px";
-
-
-
+          
+          if (x.classList.contains("responsive")) {
+            x.classList.remove('responsive')
+            body.style.overflow = "auto";
           } else {
-            x.className = "topnav";
-            closemenu.style.display = "none"
-            //mainbody.style.marginLeft = "0px";
+            x.classList.add('responsive');
+            body.style.overflow = "hidden";
           }
 
         }
